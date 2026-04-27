@@ -61,18 +61,22 @@
             <RowDefinition Height="Auto"/> <RowDefinition Height="*"/>    </Grid.RowDefinitions>
 
         <Menu Grid.Row="0">
-            <MenuItem Header="File">
-                <MenuItem Header="Import" IsEnabled="False" />
-                <MenuItem Header="Export" IsEnabled="False" />
-                <Separator />
-                <MenuItem Header="Exit" Click="MenuItem_Exit" />
-            </MenuItem>
-            <MenuItem Header="Contacts">
-                <MenuItem Header="Add contact" Click="MenuItem_AddContact" />
-                <MenuItem Header="Clear contacts" Click="MenuItem_ClearContacts" />
-            </MenuItem>
-            <MenuItem Header="About" Click="MenuItem_About" />
-        </Menu>
+    <MenuItem Header="File">
+        <MenuItem Header="Import" Click="MenuItem_Import" />
+        
+        <MenuItem Header="Export" Click="MenuItem_Export" />
+        
+        <Separator />
+        <MenuItem Header="Exit" Click="MenuItem_Exit" />
+    </MenuItem>
+    
+    <MenuItem Header="Contacts">
+        <MenuItem Header="Add contact" Click="MenuItem_AddContact" />
+        <MenuItem Header="Clear contacts" Click="MenuItem_ClearContacts" />
+    </MenuItem>
+    
+    <MenuItem Header="About" Click="MenuItem_About" />
+</Menu>
 
         <TabControl Grid.Row="1">
             <TabItem Header="List">
