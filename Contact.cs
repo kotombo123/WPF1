@@ -1,29 +1,34 @@
 using System;
+using System.Xml.Serialization;
 
 namespace ContactManager
 {
-    // Definicja płci dostępnych w aplikacji
+    // Typ wyliczeniowy dla płci
     public enum Gender
     {
         Male,
         Female
     }
 
-    // Klasa reprezentująca pojedynczy kontakt
+    // Klasa kontaktu przygotowana do zapisu w formacie XML
     public class Contact
     {
-        // Imię kontaktu
+        // Imię - zostanie zapisane jako element XML
         public string Name { get; set; }
-        // Nazwisko kontaktu
+        
+        // Nazwisko - zostanie zapisane jako element XML
         public string Surname { get; set; }
+        
         // Adres e-mail
         public string Email { get; set; }
+        
         // Numer telefonu
         public string Phone { get; set; }
-        // Płeć kontaktu (wykorzystywana do wyboru awatara)
+        
+        // Płeć
         public Gender Gender { get; set; }
 
-        // Konstruktor bezparametrowy wymagany do serializacji i wiązania danych
+        // Pusty konstruktor jest niezbędny dla mechanizmu serializacji XML
         public Contact() { }
     }
 }
